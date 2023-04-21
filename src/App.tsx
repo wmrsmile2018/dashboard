@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Card } from 'antd';
 import './App.css';
+import { ColorModeContext, useMode } from './theme';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './theme/globalStyles';
+import { Screen } from './components/Screen/Screen';
 
-function App() {
+export const App = () => {
+  const { theme, colorMode } = useMode();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Screen>
+            <Card
+              title='Default size card'
+              extra={<a href='#'>More</a>}
+              style={{ width: 300 }}
+            >
+              <p>Card content</p>
+              <p>Card content</p>
+              <p>Card content</p>
+            </Card>
+          </Screen>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
     </div>
   );
-}
-
-export default App;
+};

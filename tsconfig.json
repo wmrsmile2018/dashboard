@@ -1,11 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es2019",
+    "baseUrl": "./src",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +15,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      // "*": ["./node_modules/@types/*", "./node_modules/*"],
+      // "@common/types/*": ["./common/types/*"],
+      // "@common/enums/*": ["./common/enums/*"],
+      // "@uiKit/*": ["./uiKit/*"],
+      // "@components/*": ["./components/*"],
+      // "@theme/*": ["./theme/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+
+  "include": ["**/*.ts", "**/*.tsx"]
 }
