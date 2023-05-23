@@ -12,6 +12,7 @@ export type ColorsByMode = {
   text: string;
   textInvert: string;
   textEmphasis: string;
+  error: string;
 };
 
 export type Colors = ColorsByMode & {};

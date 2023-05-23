@@ -7,7 +7,7 @@ export const useMode = (): {
   theme: IDefaultTheme;
   colorMode: { toggleColorMode: () => void };
 } => {
-  const [mode, setMode] = useState<Mode>(Mode.light);
+  const [mode, setMode] = useState<Mode>(Mode.dark);
 
   const colorMode = useMemo(
     () => ({

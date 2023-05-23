@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 
+  
+
   * {
     margin: 0;
     padding: 0;
@@ -17,4 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     background-color: transparent;
     outline:none;
   }
+  
+  .ant-drawer-content-wrapper {
+    max-width: 600px !important;
+    width: 100% !important;
+  }
+
 `;

@@ -2,8 +2,12 @@
 
 # dependencies
 /node_modules
+/ios
+/android
 /.pnp
 .pnp.js
+
+/ios
 
 # testing
 /coverage

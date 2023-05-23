@@ -1,2 +1,1 @@
-export type Device = 'desktop';
-    // | 'mobile' | 'tablet' ;
+export type Device = 'desktop' | 'mobile' | 'tablet';
